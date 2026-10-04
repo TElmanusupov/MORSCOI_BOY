@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Морской бой</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">SEA BATTLE • MVC + FACTORY</p>
+        <h1>⚓ Морской бой</h1>
+        <p class="subtitle">Сразись с компьютером и уничтожь весь его флот.</p>
+      </div>
+      <button id="newGameBtn" class="new-game">Новая игра</button>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score"><span>Твои корабли</span><strong id="playerShips">10</strong></div>
+      <div class="status" id="status">Твой ход</div>
+      <div class="score"><span>Флот противника</span><strong id="enemyShips">10</strong></div>
+    </section>
+
+    <section class="boards">
+      <div class="board-card">
+        <div class="board-title"><h2>Моё поле</h2><span>Корабли видны</span></div>
+        <div id="playerBoard" class="board"></div>
+      </div>
+
+      <div class="board-card">
+        <div class="board-title"><h2>Поле противника</h2><span>Выбери клетку</span></div>
+        <div id="enemyBoard" class="board enemy-board"></div>
+      </div>
+    </section>
+
+    <section class="legend">
+      <div><i class="cell ship"></i> Корабль</div>
+      <div><i class="cell hit"></i> Попадание</div>
+      <div><i class="cell miss"></i> Промах</div>
+      <div><i class="cell sunk"></i> Потоплен</div>
+    </section>
+
+    <section class="architecture">
+      <h2>Архитектура программы</h2>
+      <div class="architecture-grid">
+        <article><b>Model</b><p>Board, Ship, Game — состояние игры и правила.</p></article>
+        <article><b>View</b><p>HTML/CSS — игровое поле, карточки, статистика и эффекты.</p></article>
+        <article><b>Controller</b><p>GameController — обработка кликов и управление ходами.</p></article>
+        <article><b>Factory</b><p>ShipFactory — создание флота по заданной конфигурации.</p></article>
+      </div>
+    </section>
+
+    <footer>Учебный проект • JavaScript • MVC • Factory Pattern</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
